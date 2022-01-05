@@ -7,6 +7,11 @@
     <groupId>groupId</groupId>
     <artifactId>vdo</artifactId>
     <version>1.0-SNAPSHOT</version>
+         
+   <properties>
+     <sonar.organization>maenalsayasneh</sonar.organization>
+     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+   </properties>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
