@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/divider_line_root" android:paddingLeft="@dimen/common_list_horizontal_margin" android:paddingTop="@dimen/common_vertical_margin" android:paddingRight="@dimen/common_list_horizontal_margin" android:paddingBottom="@dimen/common_vertical_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/common_list_horizontal_margin" android:paddingVertical="@dimen/common_vertical_margin">
+    <View android:background="@color/clubhouse_gray_wash" android:layout_width="match_parent" android:layout_height="@dimen/common_divider_height"/>
+</FrameLayout>

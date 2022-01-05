@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="?android:attr/windowBackground" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar style="@style/ClubhouseNavToolbar">
+        <TextView android:text="@string/report_an_issue" style="@style/ClubhouseNavTitle"/>
+        <ImageView android:id="@+id/close" android:src="@drawable/ic_close" style="@style/ClubhouseNavRightTextStyle"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:orientation="vertical" android:paddingBottom="60dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:gravity="bottom" android:layout_gravity="center_horizontal" android:id="@+id/reported_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/the_incident_has_been_reported" android:layout_weight="1" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Bold.ReportName"/>
+        <androidx.emoji.widget.EmojiTextView android:textSize="48sp" android:layout_gravity="center_horizontal" android:id="@+id/thank_you_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="20dp" android:text="��"/>
+        <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/reported_body" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/thank_you_for_making_clubhouse_safe" android:layout_weight="1" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Regular.ReportSubTitle"/>
+        <TextView android:id="@+id/helpful_links" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="@string/helpful_links" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Bold.ReportTitle"/>
+        <androidx.cardview.widget.CardView android:background="?attr/selectableItemBackground" android:layout_marginBottom="@dimen/common_bottom_margin" style="@style/Clubhouse.CardView">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center_vertical" android:id="@+id/report_community_guidelines" android:text="@string/community_guidelines" android:paddingEnd="18dp" app:drawableEndCompat="@drawable/ic_arrow_up_right" style="@style/Clubhouse.Settings.Item"/>
+                <View style="@style/DividerWithSpace"/>
+                <TextView android:gravity="center_vertical" android:id="@+id/report_get_help" android:text="@string/get_help" android:paddingEnd="18dp" app:drawableEndCompat="@drawable/ic_arrow_up_right" style="@style/Clubhouse.Settings.Item"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

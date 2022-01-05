@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root_container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/root" android:paddingLeft="@dimen/user_grid_horizontal_margin" android:paddingTop="@dimen/user_grid_top_margin" android:paddingRight="@dimen/user_grid_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingHorizontal="@dimen/user_grid_horizontal_margin">
+        <include android:id="@+id/grab_handle" android:visibility="gone" layout="@layout/bottom_sheet_grab_handle"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" style="@style/TextStyle.Bold.Body"/>
+            <Button android:id="@+id/action_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Clubhouse.Button.Borderless.Small"/>
+        </LinearLayout>
+        <EditText android:id="@+id/search" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/user_grid_search_spacing" android:layout_marginBottom="@dimen/user_grid_search_spacing" android:hint="@string/cd_search" android:layout_marginVertical="@dimen/user_grid_search_spacing" style="@style/Clubhouse.SearchField"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/user_grid_search_spacing" android:minHeight="250dp">
+            <com.airbnb.epoxy.EpoxyRecyclerView android:id="@+id/user_grid" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="250dp"/>
+            <TextView android:gravity="center_horizontal" android:id="@+id/empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/TextStyle.Body"/>
+            <ProgressBar android:layout_gravity="center_horizontal" android:id="@+id/loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </LinearLayout>
+    <com.airbnb.epoxy.EpoxyRecyclerView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/actions_list" android:background="@color/white" android:paddingLeft="@dimen/common_list_horizontal_margin" android:paddingRight="@dimen/common_list_horizontal_margin" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/events_action_element_size" android:paddingHorizontal="@dimen/common_list_horizontal_margin"/>
+    <View android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/actions_list_top_delimiter" android:background="@color/clubhouse_gray" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="@dimen/common_list_horizontal_margin" android:layout_marginRight="@dimen/common_list_horizontal_margin" android:layout_marginBottom="@dimen/events_action_element_size" android:layout_marginHorizontal="@dimen/common_list_horizontal_margin"/>
+</FrameLayout>

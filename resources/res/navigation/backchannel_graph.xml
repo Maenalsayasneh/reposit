@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/backchannel_graph" app:startDestination="@+id/inboxFragment">
+    <fragment android:name="com.clubhouse.backchannel.inbox.BackchannelInboxFragment" android:id="@+id/inboxFragment">
+        <action android:id="@+id/action_inboxFragment_to_chatFragment" app:destination="@+id/chatFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right"/>
+        <action android:id="@+id/action_inboxFragment_to_createChatFragment" app:destination="@+id/createChatFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right"/>
+        <action android:id="@+id/action_inboxFragment_to_archiveFragment" app:destination="@+id/archiveFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+    <fragment android:name="com.clubhouse.backchannel.chat.BackchannelChatFragment" android:id="@+id/chatFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.backchannel.chat.ChatArgs"/>
+    </fragment>
+    <fragment android:name="com.clubhouse.backchannel.create.BackchannelCreateChatFragment" android:id="@+id/createChatFragment">
+        <argument android:name="mavericks:arg" app:argType="com.clubhouse.android.ui.backchannel.CreateChatArgs"/>
+        <action android:id="@+id/action_createChatFragment_to_chatFragment" app:destination="@+id/chatFragment" app:exitAnim="@anim/stay" app:popExitAnim="@anim/slide_right" app:popUpTo="@+id/createChatFragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:name="com.clubhouse.backchannel.archive.BackchannelArchiveFragment" android:id="@+id/archiveFragment">
+        <action android:id="@+id/action_archiveFragment_to_chatFragment" app:destination="@+id/chatFragment" app:enterAnim="@anim/slide_left" app:exitAnim="@anim/stay" app:popEnterAnim="@anim/stay" app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+</navigation>

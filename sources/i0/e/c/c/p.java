@@ -1,0 +1,27 @@
+package i0.e.c.c;
+
+import android.content.DialogInterface;
+import com.clubhouse.backchannel.chat.BackchannelChatFragment;
+import m0.n.b.i;
+import m0.r.k;
+
+/* compiled from: lambda */
+public final /* synthetic */ class p implements DialogInterface.OnClickListener {
+    public final /* synthetic */ BackchannelChatFragment c;
+    public final /* synthetic */ String d;
+
+    public /* synthetic */ p(BackchannelChatFragment backchannelChatFragment, String str) {
+        this.c = backchannelChatFragment;
+        this.d = str;
+    }
+
+    public final void onClick(DialogInterface dialogInterface, int i) {
+        BackchannelChatFragment backchannelChatFragment = this.c;
+        String str = this.d;
+        i.e(backchannelChatFragment, "this$0");
+        i.e(str, "$clientMessageId");
+        k<Object>[] kVarArr = BackchannelChatFragment.Z1;
+        backchannelChatFragment.P0().p(new e0(str));
+        dialogInterface.dismiss();
+    }
+}

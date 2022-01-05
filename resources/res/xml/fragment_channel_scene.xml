@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <Transition app:constraintSetEnd="@+id/collapsed" app:constraintSetStart="@+id/expanded" app:duration="@android:integer/config_mediumAnimTime" app:motionInterpolator="0"/>
+    <ConstraintSet android:id="@+id/expanded">
+        <Constraint android:id="@+id/refresh" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/channel_cta_bar" app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+        <Constraint android:id="@+id/toolbar">
+            <PropertySet android:alpha="1" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/backchannel">
+            <PropertySet android:alpha="1" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/empty_state" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/channel_cta_bar" app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            <PropertySet android:alpha="1" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/collapsed_virtual_background">
+            <PropertySet android:alpha="0" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/wave_social_upsell" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:elevation="4dp" app:layout_constraintBottom_toTopOf="@+id/bottom_controls_container" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:visibilityMode="1"/>
+        <Constraint android:id="@+id/channel_cta_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:alpha="0" app:layout_constraintBottom_toTopOf="@+id/bottom_controls_container" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:visibilityMode="1"/>
+        <Constraint android:id="@+id/notice_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:alpha="0" app:layout_constraintBottom_toTopOf="@+id/channel_cta_bar" app:layout_constraintStart_toStartOf="0" app:visibilityMode="1"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/collapsed">
+        <Constraint android:id="@+id/refresh" android:layout_width="match_parent" android:layout_height="1px" app:layout_constraintTop_toTopOf="@+id/bottom_controls_container">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@+id/toolbar">
+            <PropertySet android:alpha="0" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/backchannel">
+            <PropertySet android:alpha="0" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/empty_state" android:layout_width="match_parent" android:layout_height="1px" app:layout_constraintBottom_toTopOf="@+id/channel_cta_bar" app:layout_constraintTop_toBottomOf="@+id/bottom_controls_container">
+            <PropertySet android:alpha="0" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/facepile">
+            <PropertySet android:alpha="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/collapsed_virtual_background">
+            <PropertySet android:alpha="1" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/expanded_virtual_background">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@+id/icon_leave">
+            <PropertySet android:alpha="1" app:visibilityMode="1"/>
+        </Constraint>
+        <Constraint android:id="@+id/wave_social_upsell" android:layout_width="match_parent" android:layout_height="1px" app:layout_constraintTop_toBottomOf="@+id/notice_bar">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@+id/channel_cta_bar" android:layout_width="match_parent" android:layout_height="1px" app:layout_constraintTop_toBottomOf="@+id/notice_bar">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+        <Constraint android:id="@+id/notice_bar" android:layout_width="match_parent" android:layout_height="1px" app:layout_constraintTop_toBottomOf="@+id/bottom_controls_container">
+            <PropertySet android:alpha="0"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

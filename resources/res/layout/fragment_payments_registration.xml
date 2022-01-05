@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@+id/back" style="@style/ClubhouseNavBackIcon"/>
+        <TextView android:id="@+id/toolbar_title" android:text="@string/payments" style="@style/ClubhouseNavTitle"/>
+    </androidx.appcompat.widget.Toolbar>
+    <TextView android:textSize="18sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_bottom_margin" android:layout_marginBottom="@dimen/common_touchable_padding" android:text="@string/clubhouse_payments" style="@style/TextStyle.Bold"/>
+    <TextView android:textSize="16sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_row_horizontal_padding" android:layout_marginRight="@dimen/common_row_horizontal_padding" android:layout_marginBottom="@dimen/common_bottom_margin" android:text="@string/payments_registration_description" android:layout_marginHorizontal="@dimen/common_row_horizontal_padding" style="@style/TextStyle.Regular"/>
+    <FrameLayout android:id="@+id/loading" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/retry" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <Button android:layout_gravity="center" android:id="@+id/retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retry" style="@style/Clubhouse.Button.Rounded.Gray"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/state_registration_in_review" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView style="@style/Clubhouse.CardView">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@+id/payments_account_in_review" android:background="?attr/selectableItemBackground" android:focusable="true" android:clickable="true" style="@style/Clubhouse.Settings.Row">
+                    <TextView android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:foreground="@null" android:text="@string/payment_account" android:paddingStart="0dp" android:paddingEnd="0dp" style="@style/Clubhouse.Settings.Item"/>
+                    <TextView android:textColor="@color/clubhouse_dark_gray" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:text="@string/payment_account_in_review" style="@style/Clubhouse.Settings.Item.Select"/>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView android:textSize="16sp" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_row_horizontal_padding" android:layout_marginTop="@dimen/common_bottom_margin" android:layout_marginRight="@dimen/common_row_horizontal_padding" android:text="@string/payments_hold_tight" android:layout_marginHorizontal="@dimen/common_row_horizontal_padding" style="@style/TextStyle.Regular"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/state_registration_not_started" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView style="@style/Clubhouse.CardView">
+            <FrameLayout android:id="@+id/payments_account_not_started" android:background="?attr/selectableItemBackground" android:focusable="true" android:clickable="true" style="@style/Clubhouse.Settings.Row">
+                <TextView android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:foreground="@null" android:text="@string/payment_account" android:paddingStart="0dp" android:paddingEnd="0dp" style="@style/Clubhouse.Settings.Item"/>
+                <TextView android:textColor="@color/clubhouse_dark_gray" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:text="@string/payment_account_sign_up" style="@style/Clubhouse.Settings.Item.Select"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/state_verify_email" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView style="@style/Clubhouse.CardView">
+            <androidx.constraintlayout.widget.ConstraintLayout android:padding="@dimen/common_touchable_padding" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/verify_email_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_verify_email" android:importantForAccessibility="no" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <TextView android:textSize="16sp" android:id="@+id/verify_email_text" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/payments_verify_email" android:paddingStart="@dimen/common_touchable_padding" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/verify_email_icon" app:layout_constraintTop_toTopOf="0" style="@style/TextStyle.Regular"/>
+                <Button android:textStyle="normal" android:id="@+id/verify_email_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_touchable_padding" android:text="@string/payments_add_email" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="@+id/verify_email_text" app:layout_constraintTop_toBottomOf="@+id/verify_email_text" style="@style/Clubhouse.Button.Rounded.Gray"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:alpha="0.5" style="@style/Clubhouse.CardView">
+            <FrameLayout android:focusable="false" android:clickable="false" style="@style/Clubhouse.Settings.Row">
+                <TextView android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:foreground="@null" android:text="@string/payment_account" android:paddingStart="0dp" android:paddingEnd="0dp" style="@style/Clubhouse.Settings.Item"/>
+                <TextView android:textColor="@color/clubhouse_dark_gray" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:text="@string/payment_account_sign_up" style="@style/Clubhouse.Settings.Item.Select"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/state_registration_action_needed" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView android:layout_marginBottom="16dp" app:cardBackgroundColor="@color/clubhouse_red_cell_background_color" style="@style/Clubhouse.CardView">
+            <TextView android:textSize="16sp" android:textColor="@color/clubhouse_red" android:padding="@dimen/common_touchable_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/payments_not_set_up" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/TextStyle.Medium"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView style="@style/Clubhouse.CardView">
+            <FrameLayout android:id="@+id/payments_account_action_needed" android:background="?attr/selectableItemBackground" android:focusable="true" android:clickable="true" style="@style/Clubhouse.Settings.Row">
+                <TextView android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:foreground="@null" android:text="@string/payment_account" android:paddingStart="0dp" android:paddingEnd="0dp" style="@style/Clubhouse.Settings.Item"/>
+                <TextView android:textColor="@color/clubhouse_dark_gray" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:text="@string/payment_account_continue_setup" style="@style/Clubhouse.Settings.Item.Select"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/state_payments_active" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView style="@style/Clubhouse.CardView">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/accept_payments_switch" android:text="@string/accept_payments" style="@style/Clubhouse.Settings.Item"/>
+                <View style="@style/Divider"/>
+                <FrameLayout android:id="@+id/payments_account_active" android:background="?attr/selectableItemBackground" android:focusable="true" android:clickable="true" style="@style/Clubhouse.Settings.Row">
+                    <TextView android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:foreground="@null" android:text="@string/payment_account" android:paddingStart="0dp" android:paddingEnd="0dp" style="@style/Clubhouse.Settings.Item"/>
+                    <TextView android:textColor="@color/clubhouse_dark_gray" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:text="@string/payment_account_visit" style="@style/Clubhouse.Settings.Item.Select"/>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_marginTop="16dp" style="@style/Clubhouse.CardView">
+            <FrameLayout android:id="@+id/recent_payments_row" android:background="?attr/selectableItemBackground" android:focusable="true" android:clickable="true" style="@style/Clubhouse.Settings.Row">
+                <TextView android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:foreground="@null" android:text="@string/recent_payments" android:paddingStart="0dp" android:paddingEnd="0dp" style="@style/Clubhouse.Settings.Item"/>
+                <TextView android:textColor="@color/clubhouse_dark_gray" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:text="@string/recent_payments_view" style="@style/Clubhouse.Settings.Item.Select"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

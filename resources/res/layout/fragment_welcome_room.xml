@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/channel_views" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@+id/welcome_room_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_horizontal_margin" android:layout_marginTop="@dimen/common_large_margin" android:layout_marginRight="@dimen/common_horizontal_margin" android:text="@string/welcome_room_title_empty" android:layout_marginHorizontal="@dimen/common_horizontal_margin" style="@style/TextStyle.Regular.Heading"/>
+        <com.airbnb.epoxy.EpoxyViewStub android:id="@+id/welcome_channel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_list_horizontal_margin" android:layout_marginTop="@dimen/common_touchable_padding" android:layout_marginRight="@dimen/common_list_horizontal_margin" android:layout_marginHorizontal="@dimen/common_list_horizontal_margin"/>
+        <androidx.cardview.widget.CardView android:importantForAccessibility="no" style="@style/Clubhouse.CardView.EmptyChannel"/>
+        <androidx.cardview.widget.CardView android:importantForAccessibility="no" style="@style/Clubhouse.CardView.EmptyChannel"/>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@+id/bottom_shadow" android:background="@drawable/list_bottom_shadow" android:layout_width="match_parent" android:layout_height="@dimen/common_list_bottom_shadow_height"/>
+    <Button android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/no_thanks" android:padding="@dimen/common_touchable_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/common_bottom_margin" android:layout_marginTop="@dimen/common_large_margin" android:text="@string/no_thanks" style="@style/Clubhouse.Button.Borderless.Small.Gray"/>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</FrameLayout>

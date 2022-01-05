@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.clubhouse.android.shared.ui.AvatarView android:id="@+id/avatar" android:layout_width="@dimen/create_chat_selected_avatar_size" android:layout_height="@dimen/create_chat_selected_avatar_size" android:layout_marginEnd="12dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <ImageView android:id="@+id/remove" android:layout_width="24dp" android:layout_height="24dp" android:foreground="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_remove_button" android:translationX="12dp" app:layout_constraintEnd_toEndOf="@+id/avatar" app:layout_constraintTop_toTopOf="@+id/avatar"/>
+    <TextView android:ellipsize="end" android:id="@+id/name" android:paddingTop="@dimen/avatar_below_username_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:layout_constraintEnd_toEndOf="@+id/avatar" app:layout_constraintStart_toStartOf="@+id/avatar" app:layout_constraintTop_toBottomOf="@+id/avatar" style="@style/TextStyle.Bold"/>
+</merge>

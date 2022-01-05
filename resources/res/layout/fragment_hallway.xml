@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:clipChildren="false" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavToolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/search_icon" android:src="@drawable/ic_search" android:contentDescription="@string/cd_search" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavIcon"/>
+            <com.clubhouse.android.shared.ui.AvatarView android:id="@+id/me" android:contentDescription="@string/cd_my_profile" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavIcon"/>
+            <ImageView android:id="@+id/notification_icon" android:src="@drawable/ic_notification_off" android:contentDescription="@string/cd_notifications" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/me" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavIcon"/>
+            <ImageView android:id="@+id/events_icon" android:src="@drawable/ic_calendar" android:contentDescription="@string/cd_calendar" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/notification_icon" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavIcon"/>
+            <ImageView android:id="@+id/invites_icon" android:layout_width="36dp" android:layout_height="32dp" android:src="@drawable/ic_invites" android:contentDescription="@string/cd_invites" android:layout_marginStart="18dp" android:layout_marginEnd="18dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/events_icon" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavIcon"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <com.clubhouse.android.core.ui.CustomSwipeViewPager android:id="@+id/pager" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+    <FrameLayout android:id="@+id/loading" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

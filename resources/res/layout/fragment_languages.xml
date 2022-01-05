@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="?android:attr/windowBackground" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@+id/back" style="@style/ClubhouseNavBackIcon"/>
+        <TextView android:id="@+id/toolbar_title" android:text="@string/languages" style="@style/ClubhouseNavTitle"/>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView android:orientation="vertical" android:id="@+id/languages_list_container" android:paddingBottom="44dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            <TextView android:textSize="16sp" android:gravity="center" android:paddingLeft="58dp" android:paddingRight="58dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:text="@string/tell_us_which_languages" android:paddingHorizontal="58dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/hosts_club_list_root" style="@style/TextStyle.Medium"/>
+            <androidx.cardview.widget.CardView android:id="@+id/languages_list_root" android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbar" style="@style/Clubhouse.CardView">
+                <com.airbnb.epoxy.EpoxyRecyclerView android:id="@+id/languages_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <View android:id="@+id/bottom_shadow" android:background="@drawable/list_bottom_shadow" android:layout_width="match_parent" android:layout_height="96dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

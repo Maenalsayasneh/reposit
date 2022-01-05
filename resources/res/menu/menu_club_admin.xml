@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/edit_topics" android:title="@string/edit_club_topics"/>
+    <item android:id="@+id/edit_rules" android:title="@string/edit_club_rules"/>
+    <item android:id="@+id/edit_description" android:title="@string/edit_description"/>
+    <item android:id="@+id/membership_setting" android:title="@string/membership_open_to_all"/>
+    <item android:id="@+id/apply_to_join_setting" android:title="@string/stop_letting_people_apply_to_join"/>
+    <item android:id="@+id/host_room_setting" android:title="@string/let_all_members_host_rooms"/>
+    <item android:id="@+id/member_list_setting" android:title="@string/hide_member_list"/>
+    <item android:id="@+id/leave_club" android:title="@string/leave_club"/>
+    <item android:id="@+id/delete_club" android:visible="false" android:title="@string/delete_club"/>
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:elevation="1dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavToolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/back" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavBackIcon"/>
+            <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/backchannel" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavTitle"/>
+            <ImageView android:layout_gravity="end" android:id="@+id/create_chat" android:padding="1dp" android:src="@drawable/ic_create_chat" android:contentDescription="@string/new_message" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavIcon"/>
+            <ImageView android:layout_gravity="end" android:id="@+id/settings" android:padding="3dp" android:src="@drawable/ic_horizontal_menu" android:contentDescription="@string/cd_settings" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/create_chat" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavIcon"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <com.google.android.material.tabs.TabLayout android:id="@+id/tabs" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="1dp" app:layout_constraintBottom_toTopOf="@+id/refresh" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbar" style="@style/Clubhouse.TabLayout"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/refresh" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/tabs">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.airbnb.epoxy.EpoxyRecyclerView android:id="@+id/inbox_list" android:paddingBottom="@dimen/common_bottom_margin" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            <TextView android:textSize="16sp" android:gravity="center" android:id="@+id/empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/inbox_empty_state_horizontal_margin" android:layout_marginRight="@dimen/inbox_empty_state_horizontal_margin" android:text="@string/inbox_empty" android:layout_marginHorizontal="@dimen/inbox_empty_state_horizontal_margin" style="@style/TextStyle.Medium"/>
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

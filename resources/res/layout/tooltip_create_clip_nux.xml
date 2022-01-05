@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:padding="@dimen/common_big_touchable_padding" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/header_image" android:layout_width="match_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" app:srcCompat="@drawable/ic_create_clip_illustration"/>
+    <TextView android:textSize="@dimen/text_size_message" android:gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/create_clip_education_tooltip_title" style="@style/TextStyle.Bold"/>
+    <TextView android:gravity="center" android:id="@+id/body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/create_clip_education_tooltip_message" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/title" style="@style/TextStyle.Regular.Body"/>
+</LinearLayout>

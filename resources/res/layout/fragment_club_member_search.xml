@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="?android:attr/windowBackground" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@+id/back" style="@style/ClubhouseNavBackIcon"/>
+        <TextView android:id="@+id/toolbar_title" android:text="@string/club_member_search" style="@style/ClubhouseNavTitle"/>
+    </androidx.appcompat.widget.Toolbar>
+    <EditText android:id="@+id/search" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/explore_horizontal_margin" android:layout_marginRight="@dimen/explore_horizontal_margin" android:hint="@string/cd_search" android:cursorVisible="true" android:inputType="textPersonName" android:layout_marginHorizontal="@dimen/explore_horizontal_margin" android:importantForAutofill="2" app:layout_constraintEnd_toStartOf="@+id/cancel" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/toolbar" style="@style/Clubhouse.SearchField.Dark">
+        <requestFocus/>
+    </EditText>
+    <Button android:id="@+id/cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_marginEnd="@dimen/explore_horizontal_margin" app:layout_constraintBottom_toBottomOf="@+id/search" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/search" app:layout_constraintTop_toTopOf="@+id/search" style="@style/Clubhouse.Button.Borderless.Small"/>
+    <View android:id="@+id/divider" android:layout_marginTop="@dimen/common_vertical_margin" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/search" style="@style/Divider"/>
+    <com.airbnb.epoxy.EpoxyRecyclerView android:id="@+id/members_list" android:paddingTop="@dimen/common_vertical_margin" android:paddingBottom="@dimen/common_bottom_margin" android:layout_width="match_parent" android:layout_height="0dp" app:itemSpacing="@dimen/list_item_spacing" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/divider"/>
+    <FrameLayout android:id="@+id/loading" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

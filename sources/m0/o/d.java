@@ -1,0 +1,10 @@
+package m0.o;
+
+import m0.r.k;
+
+/* compiled from: Interfaces.kt */
+public interface d<T, V> extends c<T, V> {
+    V getValue(T t, k<?> kVar);
+
+    void setValue(T t, k<?> kVar, V v);
+}

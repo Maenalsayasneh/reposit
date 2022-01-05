@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="?android:attr/windowBackground" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/ClubhouseNavToolbar">
+        <TextView android:layout_gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chat_members" style="@style/ClubhouseNavTitle"/>
+        <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/close" android:src="@drawable/ic_close" android:contentDescription="@string/cd_close" style="@style/ClubhouseNavIcon"/>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.cardview.widget.CardView android:layout_marginBottom="@dimen/common_touchable_padding" app:cardCornerRadius="@dimen/common_sheet_corner_radius" style="@style/Clubhouse.CardView">
+        <com.airbnb.epoxy.EpoxyRecyclerView android:id="@+id/members_list" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

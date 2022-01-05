@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="?android:attr/windowBackground" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar style="@style/ClubhouseNavToolbar">
+        <ImageView android:id="@+id/back" style="@style/ClubhouseNavBackIcon"/>
+        <TextView android:text="@string/report_an_issue" style="@style/ClubhouseNavTitle"/>
+        <TextView android:id="@+id/submit" android:text="@string/submit" style="@style/ClubhouseNavRightTextStyle"/>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView android:id="@+id/content_container" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/report_item_vertical_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="20dp" android:layout_marginRight="16dp" android:text="@string/reporting" android:textAllCaps="true" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Bold.ReportCapsTitle"/>
+            <androidx.cardview.widget.CardView android:layout_height="wrap_content" style="@style/Clubhouse.CardView">
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.clubhouse.android.shared.ui.AvatarView android:id="@+id/avatar" android:layout_width="30dp" android:layout_height="30dp" app:layout_constraintBottom_toBottomOf="@+id/name" app:layout_constraintEnd_toStartOf="@+id/name" app:layout_constraintHorizontal_chainStyle="2" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/name"/>
+                    <TextView android:gravity="center_vertical" android:id="@+id/name" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/settings_item_height" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/avatar" app:layout_constraintTop_toTopOf="0" app:layout_goneMarginEnd="6dp" app:layout_goneMarginStart="6dp" style="@style/TextStyle.Bold.ReportName"/>
+                    <View android:id="@+id/reporting_divider" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/name" style="@style/DividerWithSpace"/>
+                    <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/reporting_reason" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/reporting_divider" style="@style/Clubhouse.Settings.Item"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView android:id="@+id/details_of_the_incident" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="30dp" android:layout_marginRight="16dp" android:text="@string/details_of_the_incident" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Bold.ReportTitle"/>
+            <TextView android:id="@+id/please_give_us_as_much_context" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="5dp" android:layout_marginRight="16dp" android:text="@string/please_give_us_as_much_context" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Regular.ReportSubTitle"/>
+            <androidx.cardview.widget.CardView android:id="@+id/add_details_root" android:layout_marginTop="12dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/host_club_event_info" style="@style/Clubhouse.CardView">
+                <EditText android:id="@+id/add_details" android:paddingTop="@dimen/create_description_vertical_padding" android:paddingBottom="@dimen/create_description_vertical_padding" android:layout_width="match_parent" android:layout_height="@dimen/create_description_height" android:hint="@string/add_details_here" android:paddingVertical="@dimen/create_description_vertical_padding" style="@style/Clubhouse.CardView.EditText"/>
+            </androidx.cardview.widget.CardView>
+            <TextView android:id="@+id/visual_evidence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="30dp" android:layout_marginRight="16dp" android:text="@string/visual_evidence" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Bold.ReportTitle"/>
+            <TextView android:id="@+id/we_have_attached_a_screenshot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="5dp" android:layout_marginRight="16dp" android:text="@string/we_have_attached_a_screenshot" android:layout_marginHorizontal="16dp" style="@style/TextStyle.Regular.ReportSubTitle"/>
+            <FrameLayout android:id="@+id/screenshot_container" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" android:layout_marginTop="12dp" android:layout_marginStart="16dp">
+                <ImageView android:id="@+id/screenshot" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <ImageView android:id="@+id/screenshot_border" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/dotted_roundable_rect"/>
+            </FrameLayout>
+            <Button android:textColor="@color/clubhouse_eggshell_dark" android:id="@+id/attach_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="5dp" android:layout_marginRight="16dp" android:text="@string/attach_an_image" android:layout_marginHorizontal="16dp" style="@style/Clubhouse.Button.Rounded.ChannelCta"/>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@+id/loading" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

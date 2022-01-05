@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="blocked_speakers">
+        <item quantity="one">Someone you have blocked is a speaker</item>
+        <item quantity="other">People you have blocked are speakers</item>
+    </plurals>
+    <plurals name="blocked_users">
+        <item quantity="one">Someone you have blocked is in the room</item>
+        <item quantity="other">People you have blocked are in the room</item>
+    </plurals>
+    <plurals name="cd_raised_hands_count">
+        <item quantity="one">Raised hands list, %d hand is raised</item>
+        <item quantity="other">Raised hands list, %d hands are raised</item>
+    </plurals>
+    <plurals name="characters_over_limit">
+        <item quantity="one">%d character over limit</item>
+        <item quantity="other">%d characters over limit</item>
+    </plurals>
+    <plurals name="characters_remaining">
+        <item quantity="one">%d character remaining</item>
+        <item quantity="other">%d characters remaining</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+    <plurals name="follow_overflow">
+        <item quantity="one">and %s other</item>
+        <item quantity="other">and %s others</item>
+    </plurals>
+    <plurals name="followers_label">
+        <item quantity="one">follower</item>
+        <item quantity="other">followers</item>
+    </plurals>
+    <plurals name="friends_on_clubhouse">
+        <item quantity="one">%d friends on Clubhouse</item>
+        <item quantity="other">%d friends on Clubhouse</item>
+    </plurals>
+    <plurals name="hide_blocked">
+        <item quantity="one">Hide %d blocked room</item>
+        <item quantity="other">Hide %d blocked rooms</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="one">%d hour ago</item>
+        <item quantity="other">%d hours ago</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_hours_ago">
+        <item quantity="one">%d hr ago</item>
+        <item quantity="other">%d hrs ago</item>
+    </plurals>
+    <plurals name="instabug_feature_rq_str_minutes_ago">
+        <item quantity="one">%d min ago</item>
+        <item quantity="other">%d mins ago</item>
+    </plurals>
+    <plurals name="members_online">
+        <item quantity="one">%d Member Online</item>
+        <item quantity="other">%d Members Online</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="one">%d minute ago</item>
+        <item quantity="other">%d minutes ago</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="num_members">
+        <item quantity="one">%s Member</item>
+        <item quantity="other">%s Members</item>
+    </plurals>
+    <plurals name="on_clubhouse_overflow">
+        <item quantity="one">%d more person you know just signed up for Clubhouse. Follow them?</item>
+        <item quantity="other">%d more people you know just signed up for Clubhouse. Follow them?</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="one">%d second ago</item>
+        <item quantity="other">%d seconds ago</item>
+    </plurals>
+    <plurals name="show_blocked">
+        <item quantity="one">Show %d blocked room</item>
+        <item quantity="other">Show %d blocked rooms</item>
+    </plurals>
+</resources>

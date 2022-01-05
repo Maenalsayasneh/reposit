@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <com.stripe.android.paymentsheet.ui.PrimaryButton android:id="@+id/primary_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/stripe_paymentsheet_primary_button_margin" android:text="@string/stripe_paymentsheet_pay_button_label"/>
+    <RelativeLayout android:id="@+id/google_pay_button_icon" android:background="@drawable/stripe_googlepay_button_no_shadow_background" android:paddingTop="2sp" android:layout_width="match_parent" android:layout_height="@dimen/stripe_paymentsheet_primary_button_height" android:contentDescription="@string/google_pay">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2">
+            <ImageView android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="0dp" android:src="@drawable/stripe_googlepay_button_content" android:scaleType="fitCenter" android:layout_weight="1"/>
+        </LinearLayout>
+        <ImageView android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/stripe_googlepay_button_overlay" android:scaleType="fitXY"/>
+    </RelativeLayout>
+</merge>

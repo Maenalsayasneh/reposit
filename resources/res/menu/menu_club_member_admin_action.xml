@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:id="@+id/roles" android:checkableBehavior="single">
+        <item android:id="@+id/admin" android:title="@string/club_member_role_admin"/>
+        <item android:id="@+id/leader" android:title="@string/club_member_role_leader"/>
+        <item android:id="@+id/member" android:title="@string/club_member_role_member"/>
+    </group>
+    <group android:id="@+id/remove" android:checkableBehavior="none">
+        <item android:id="@+id/remove_from_club" android:title="@string/remove_from_club"/>
+    </group>
+</menu>
